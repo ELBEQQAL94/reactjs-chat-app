@@ -1,0 +1,239 @@
+/*
+    @author: elbeqqal youssef,
+    @date: 08/01/2020,
+    @version: 1.0.0,
+    @name: chat app
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background: rgb(39, 7, 156);
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    height: 3000px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #ffffff;
+    padding: 7vmin;
+    font-family: 'Gelasio', serif
+}
+
+header .brand {
+    cursor: pointer;
+    font-size: 6vmin;
+}
+
+header .brand a { text-decoration: none; }
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 3vmin
+}
+
+header ul li a {
+    transition: all .5s linear;
+    text-decoration: none;
+    font-size: 3vmin;
+    color: black;
+    text-transform: uppercase;
+}
+
+header ul li a:hover {
+    color: #0b121b;
+}
+
+header ul li .active {
+    color: #ffffff;
+    border-bottom: 2px solid rgb(39, 7, 156);
+    padding: 3vmin;
+    background: rgb(26, 156, 216);
+}
+
+/* JOIN */
+.join, .chat {
+    margin: 4vmin 0;
+    width: 98vw;
+    height: 100vh;
+    padding: 7vmin;
+}
+
+.join h1 {
+    text-align: center;
+    font-size: 7vmin;
+    color: #ffffff
+}
+
+.join .form_container, .chat .chat_container {
+    background: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7vmin;
+}
+
+.join .form_container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join .form_container form input, button {
+    width: 50vw;
+    padding: 3vmin;
+    margin: 5vmin 0;
+    font-size: 3vmin;
+    transition: all .5s linear;
+}
+
+.join .form_container form input:focus{
+    box-shadow: 0 7px 5px rgb(39, 7, 156);
+}
+
+.join .form_container form button {
+    background: rgb(26, 156, 216);
+    color: #ffffff;
+    outline: none;
+    border: 2px solid #1f1313;
+    font-size: 4vmin;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 5px 5px #ffffff;
+}
+
+.join .form_container form button:hover{
+    background: #ffffff;
+    color: black;
+}
+
+.join .form_container .chat_now {
+    color: #ffffff;
+    font-size: 3vmin;
+    padding: 2vmin;
+    transition: all .5s linear;
+    text-transform: uppercase;
+}
+
+.join .form_container .chat_now:hover{
+    color: aqua
+}
+
+/* CHAT */
+.chat .chat_container {
+    background: transparent;
+}
+
+.chat .chat_container .chat_bar{
+    width: 70%;
+    background: aqua;
+    padding: 5vmin;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat .chat_container .chat_bar .room_name {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.chat .chat_container .chat_bar .room_name img {
+    width: 15px;
+    height: 15px;
+    font-size: 3vmin;
+    font-family: 'Rubik', sans-serif;
+    margin-right: 1vmin;
+}
+
+.chat .chat_container .chat_bar .close_chat a { 
+    text-decoration: none;
+    color: black;
+    transition: all .5s linear;
+    font-size: 3vmin
+}
+
+.chat .chat_container .chat_bar .close_chat a:hover{
+    color: red;
+    transform: scale(2);
+}
+
+.chat .chat_container .chat_box {
+    width: 70%;
+    background: #ffffff;
+    padding: 5vmin;
+    height: 500px; /* test */
+}
+
+.chat .chat_container .chat_box .message_box_conatiner {
+    color: #ffffff;
+}
+
+.right { display: flex; justify-content: right; }
+
+.left { display: flex; justify-content: left;}
+
+.current_user, .other_user {
+    padding: 4vmin;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    width: max-content;
+}
+
+.current_user {
+    background: aqua;
+}
+
+.other_user {
+    background: black
+}
+
+.chat .chat_container .send_message {
+    width: 70%;
+    display: flex;
+    margin: 3vmin 0;
+}
+
+.chat .chat_container .send_message input {
+    width: 80%;
+    height: 70px;
+    padding: 2vmin;
+    border-radius: 20px;
+    font-size: 3vmin
+}
+
+.chat .chat_container .send_message button {
+    margin: 0;
+    width: 20%;
+    border-radius: 20px;
+    font-size: 3vmin;
+    font-weight: 200;
+    background: aqua;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.chat .chat_container .send_message button:hover{
+    background: #ffffff;
+    color:black
+}
